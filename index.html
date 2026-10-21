@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - To-Do List App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="app-container">
+
+        <header class="app-header">
+            <p class="app-label">YOUR PERSONAL TASK MANAGER</p>
+            <h1>TaskFlow<span>.</span></h1>
+            <p class="app-description">
+                Organize your day, one task at a time.
+            </p>
+        </header>
+
+        <section class="todo-card" aria-labelledby="todo-heading">
+
+            <div class="card-heading">
+                <div>
+                    <h2 id="todo-heading">My Tasks</h2>
+                    <p class="task-subtitle">Make today productive!</p>
+                </div>
+
+                <div class="task-counter" aria-live="polite">
+                    <span id="remaining-count">0</span>
+                    <span>left</span>
+                </div>
+            </div>
+
+            <form id="todo-form" class="todo-form">
+                <label for="task-input" class="visually-hidden">
+                    Enter a new task
+                </label>
+
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="What do you need to do?"
+                    maxlength="150"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" class="add-button">
+                    + Add Task
+                </button>
+            </form>
+
+            <p id="form-message" class="form-message" role="status"></p>
+
+            <div class="list-heading">
+                <h3>Your task list</h3>
+                <span id="total-count">0 tasks</span>
+            </div>
+
+            <ul id="task-list" class="task-list"></ul>
+
+            <p id="empty-message" class="empty-message">
+                No tasks yet. Add your first task above!
+            </p>
+
+            <div class="list-footer">
+                <span>Small steps lead to big results.</span>
+                <button type="button" id="clear-completed" class="clear-button">
+                    Clear completed
+                </button>
+            </div>
+
+        </section>
+
+        <footer class="app-footer">
+            <p>TaskFlow &copy; 2026 | Stay focused and keep growing.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
